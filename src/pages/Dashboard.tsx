@@ -6,6 +6,7 @@ import { AddTemplateForm } from '../components/forms/TemplateForm';
 import { AdminTemplatesList } from '../components/dashboard/AdminTemplatesList';
 import MyGallery from '../components/dashboard/MyGallery';
 import CreateFlyerPage from './CreateFlyerPage';
+
 interface DashboardProps {
     userRole?: 'ADMIN' | 'USER';
     userName?: string;
@@ -13,17 +14,21 @@ interface DashboardProps {
 }
 
 export const Dashboard: React.FC<DashboardProps> = ({
-    userRole,
+    userRole = 'USER', // 1. Solución: Asignar 'USER' por defecto si viene undefined
     userName,
     userEmail,
 }) => {
     const [activeTab, setActiveTab] = useState<TabType>('home');
-    const handleTabChange = (tab: TabType) => {
+
+    // 2. Solución: Tipar la entrada como string para que coincida con DashboardLayout
+    const handleTabChange = (tab: string) => {
+        const targetTab = tab as TabType;
+
         // Proteger rutas de admin
-        if ((tab === 'add-template' || tab === 'my-templates') && userRole !== 'ADMIN') {
+        if ((targetTab === 'add-template' || targetTab === 'my-templates') && userRole !== 'ADMIN') {
             return;
         }
-        setActiveTab(tab);
+        setActiveTab(targetTab);
     };
 
     return (

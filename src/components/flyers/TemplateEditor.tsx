@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import {
     ArrowLeft, Download, Building2, Type, Clock,
-    Plus, Trash2, Image as ImageIcon, Move, Wand2, ZoomIn, Sun, Moon
+    Plus, Trash2, Image as ImageIcon, Move, Wand2, ZoomIn,
 } from 'lucide-react';
 import { removeBackground } from '@imgly/background-removal';
 import type { AdminTemplate } from '../../types/flyer.type';

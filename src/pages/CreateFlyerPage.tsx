@@ -5,7 +5,7 @@ import { TemplateGallery } from '../components/flyers/TemplateGallery';
 import { TemplateEditor } from '../components/flyers/TemplateEditor';
 import { AIDesignForm } from '../components/forms/AIDesignForm';
 import type { Design } from '../api/ai.api';
-import { Sparkles, Download, ExternalLink, RefreshCw } from 'lucide-react';
+import { Sparkles, Download, RefreshCw } from 'lucide-react';
 
 export const CreateFlyerPage: React.FC = () => {
     const [mode, setMode] = useState<CreationMode>('selection');

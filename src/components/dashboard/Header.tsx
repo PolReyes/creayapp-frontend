@@ -1,6 +1,6 @@
 // src/components/Header.tsx
 import React from 'react';
-import { Menu, Sparkles, Bell, Sun, Moon } from 'lucide-react';
+import { Menu, Sparkles, Sun, Moon } from 'lucide-react';
 import type { Theme } from '../../hooks/useTheme';
 import { useAuth } from '../../context/AuthContext';
 import LogoutButton from './LogoutButton';
@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
     onOpenSidebar,
     //userRole = 'USER',
     userName = 'Usuario',
-    userEmail = 'usuario@ejemplo.com',
+    // userEmail = 'usuario@ejemplo.com',
     theme = 'dark',
     onToggleTheme,
 }) => {
