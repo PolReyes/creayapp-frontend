@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Obtener la URL de entorno
-const rawBaseURL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api/v1';
+const rawBaseURL = import.meta.env.API_URL || 'http://localhost:4000/api/v1';
 
 // Asegurar que comience con http:// o https:// si no estamos en localhost
 const formattedBaseURL =
