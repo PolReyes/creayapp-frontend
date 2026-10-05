@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const rawBaseURL = import.meta.env.API_URL || 'http://localhost:4000/api/v1';
+const rawBaseURL = import.meta.env.VITE_API_URL || 'http://localhost:4000/api/v1';
 
 // Log para depuración en la consola del navegador
 console.log('API Base URL cargada:', rawBaseURL);
